@@ -1,4 +1,83 @@
-//ШРИФТ ПО УМОЛЧАНИЮ>
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ>
+
+// Roboto
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+// Humanst521BT Light
+
+@font-face {
+	font-family: "Humanst521BT";
+	src: url("../../assets/fonts/humanist-521-light-bt.woff");
+	src:
+		url("../../assets/fonts/humanist-521-light-bt.woff") format("woff"),
+		url("../../assets/fonts/humanist-521-light-bt.ttf") format("ttf");
+	font-style: normal;
+	font-weight: 300;
+}
+
+// Humanst521BT Regular
+
+@font-face {
+	font-family: "Humanst521BT";
+	src: url("../../assets/fonts/humanst521-bt-roman.woff");
+	src:
+		url("../../assets/fonts/humanst521-bt-roman.woff") format("woff"),
+		url("../../assets/fonts/humanst521-bt-roman.ttf") format("ttf");
+	font-style: normal;
+	font-weight: 400;
+}
+
+// Humanst521BT Bold
+
+@font-face {
+	font-family: "Humanst521BT";
+	src: url("../../assets/fonts/humanist-521-bt-bold.woff");
+	src:
+		url("../../assets/fonts/humanist-521-bt-bold.woff") format("woff"),
+		url("../../assets/fonts/humanist-521-bt-bold.otf") format("otf");
+	font-style: normal;
+	font-weight: 700;
+}
+
+// Humanst521BT ExtraBold
+
+@font-face {
+	font-family: "Humanst521BT";
+	src: url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.woff");
+	src:
+		url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.woff") format("woff"),
+		url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.ttf") format("ttf");
+	font-style: normal;
+	font-weight: 800;
+}
+
+// ПЕРЕМЕННЫЕ>
+$md1: 1440.98px;
+$md2: 767.98px;
+$md3: 479.98px;
+$minwidth: 320px;
+$ff1: Roboto;
+$ff2: Humanst521BT;
+
+:root {
+	--blur-white-text: #fcf4de;
+	--white-color: #ffffff;
+	--lightContrast-blue-color: #a2e1f3;
+	--blue-bg-color: #04adc8;
+	--lightContrast-bg-color: #dfc0de;
+	--pink-bg-color: #ce96cc;
+	--lime-color: #ddd565;
+	--highContrast-lime-color: #c4b300;
+	--lightContrast-bg-color: #b2d987;
+	--green-bg-color: #60ab40;
+	--mandarin-bg-color: #ffa777;
+	--orange-bg-color: #ffa33b;
+	--lightContrast-orange-color: #f87d4b;
+	--darkOrange-color: #c46031;
+	--blackLight-text-color: #3b372a;
+	--black-color: #000000;
+}
 
 // ФАЙЛ ОБНУЛЯЮЩИХ СТИЛЕЙ>
 @import "./components/nullstyle";
@@ -8,9 +87,8 @@
 @import "./Layouts/footer";
 @import "./Layouts/wrapper";
 @import "./Layouts/popup";
+@import "./Layouts/homeMain";
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
 @import "./components/ui";
 @import "./components/mixins";
-
-// ОСНОВНОЙ БЛОК>

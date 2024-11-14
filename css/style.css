@@ -1,4 +1,52 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "Humanst521BT";
+  src: url("../../assets/fonts/humanist-521-light-bt.woff");
+  src: url("../../assets/fonts/humanist-521-light-bt.woff") format("woff"), url("../../assets/fonts/humanist-521-light-bt.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Humanst521BT";
+  src: url("../../assets/fonts/humanst521-bt-roman.woff");
+  src: url("../../assets/fonts/humanst521-bt-roman.woff") format("woff"), url("../../assets/fonts/humanst521-bt-roman.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Humanst521BT";
+  src: url("../../assets/fonts/humanist-521-bt-bold.woff");
+  src: url("../../assets/fonts/humanist-521-bt-bold.woff") format("woff"), url("../../assets/fonts/humanist-521-bt-bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Humanst521BT";
+  src: url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.woff");
+  src: url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.woff") format("woff"), url("../../assets/fonts/humanist-521-extra-bold-condensed-bt.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+:root {
+  --blur-white-text: #fcf4de;
+  --white-color: #ffffff;
+  --lightContrast-blue-color: #a2e1f3;
+  --blue-bg-color: #04adc8;
+  --lightContrast-bg-color: #dfc0de;
+  --pink-bg-color: #ce96cc;
+  --lime-color: #ddd565;
+  --highContrast-lime-color: #c4b300;
+  --lightContrast-bg-color: #b2d987;
+  --green-bg-color: #60ab40;
+  --mandarin-bg-color: #ffa777;
+  --orange-bg-color: #ffa33b;
+  --lightContrast-orange-color: #f87d4b;
+  --darkOrange-color: #c46031;
+  --blackLight-text-color: #3b372a;
+  --black-color: #000000;
+}
+
 /*Обнуление*/
 * {
   padding: 0;
@@ -6,23 +54,31 @@
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -33,7 +89,9 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -50,7 +108,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -66,13 +125,24 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
 
 /*--------------------*/
-@media (max-width: 767.98px) {
+.header__container {
+  display: flex;
+}
+.menu__list {
+  display: flex;
+}
+@media (max-width: 1440.98px) {
   .burger__list {
     position: relative;
     width: 23px;
@@ -148,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 [class*=__container] {
-  max-width: 1200px;
+  max-width: 1430px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -161,8 +231,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: Arial;
-  font-size: 16px;
+  font-family: Roboto;
+  font-size: 25px;
+  height: 100%;
 }
 
 body._lock {
@@ -222,4 +293,38 @@ body._lock {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.home__swiper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.home__swiper--slide:nth-child(1) {
+  background: var(--blue-bg-color);
+}
+.home__swiper--slide:nth-child(2) {
+  background: var(--pink-bg-color);
+}
+.home__swiper--slide:nth-child(3) {
+  background: var(--green-bg-color);
+}
+.home__swiper--slide:nth-child(4) {
+  background: var(--orange-bg-color);
+}
+.home--footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.home__main {
+  display: block;
+  flex: 1 1 100%;
+}
+
+.food__bg--grain-1 {
+  max-height: 231px;
+  width: 100%;
 }
