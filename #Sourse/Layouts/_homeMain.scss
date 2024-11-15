@@ -7,6 +7,35 @@
 		height: 100vh;
 		display: flex;
 
+		&--wrapper {
+			position: relative;
+		}
+
+		&--slide {
+			// ::before {
+			// 	content: "";
+			// 	@include bgImage("../../assets/animation/leftEllipse.png", left center, no-repeat, auto);
+			// 	position: absolute;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	top: 200px;
+			// 	left: -200px;
+			// 	opacity: 0.03;
+			// 	z-index: -1;
+			// }
+			// ::after {
+			// 	content: "";
+			// 	@include bgImage("../../assets/animation/rightEllipse.png", right center, no-repeat, auto);
+			// 	position: absolute;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	top: -35px;
+			// 	left: 220px;
+			// 	opacity: 0.03;
+			// 	z-index: -1;
+			// }
+		}
+
 		&--slide:nth-child(1) {
 			background: var(--blue-bg-color);
 		}
@@ -26,10 +55,90 @@
 		bottom: 0;
 		width: 100%;
 	}
+	&__main {
+		position: relative;
+		z-index: 10;
+		&-content {
+			@include flexbox;
+			justify-content: space-between;
+			&--ls {
+				position: relative;
+				flex: 1 1 40%;
+				flex-basis: calc(100% - 623px);
+				max-width: 464px;
+
+				// Left image
+				img:nth-child(1) {
+					position: absolute;
+					bottom: 50px;
+					left: 50px;
+					z-index: 5;
+				}
+				// Center image
+				img:nth-child(2) {
+					position: absolute;
+					top: 30px;
+					left: 60%;
+					transform: translate(-60%, 0);
+					z-index: 4;
+				}
+				// Right image
+				img:nth-child(3) {
+					position: absolute;
+					bottom: 50px;
+					right: -50px;
+					z-index: 5;
+				}
+			}
+			&--rs {
+				@include flexbox;
+				flex-direction: column;
+				max-width: 623px;
+			}
+		}
+		&--title {
+			@include textDefault($ff2, var(--blackLight-text-color), 50px, 700, 60px);
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		&--text {
+			@include textDefault($ff1, var(--blackLight-text-color), 25px, 400, 29px);
+			text-align: left;
+			margin-bottom: 90px;
+		}
+		&--btn {
+			margin: 0 auto;
+			@include textDefault($ff2, var(--blur-white-text), 30px, 400, 36px);
+			text-align: center;
+			padding: 16px 28px;
+			box-sizing: border-box;
+			border: none;
+			background-color: var(--darkOrange-color);
+			transition: background-color 0.4s;
+			will-change: background-color;
+			border-radius: 20px;
+			max-width: 325px;
+		}
+		&_second-page {
+			&--ls {
+			}
+			&--rs {
+				h2 {
+				}
+			}
+		}
+		&--list {
+			&-item {
+				span {
+				}
+			}
+		}
+	}
 }
-.home__main {
-	display: block;
-	flex: 1 1 100%;
+.list-item__bg {
+}
+.home__main--btn:hover {
+	background-color: #a24419;
 }
 .food__bg {
 	&--grain-1 {

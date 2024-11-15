@@ -138,85 +138,25 @@ h6 {
 /*--------------------*/
 .header__container {
   display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-left: 40px;
 }
 .menu__list {
   display: flex;
 }
-@media (max-width: 1440.98px) {
-  .burger__list {
-    position: relative;
-    width: 23px;
-    height: 14px;
-    cursor: pointer;
-  }
-  .burger__list span:nth-child(1) {
-    display: inline-block;
-    height: 2px;
-    background: black;
-    transition: transform 0.4s;
-    will-change: transform;
-    position: absolute;
-    width: 100%;
-    top: 0;
-  }
-  .burger__list span:nth-child(2) {
-    display: inline-block;
-    transition: scale 0.4s;
-    will-change: scale;
-    height: 2px;
-    background: black;
-    transform: translate(0, -50%);
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-  }
-  .burger__list span:nth-child(3) {
-    display: inline-block;
-    height: 2px;
-    background: black;
-    transform: translate(0);
-    transition: all 0.4s;
-    will-change: transform;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
-  .burger__list.active {
-    transition: transform 0.3s;
-  }
-  .burger__list.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .burger__list.active span:nth-child(2) {
-    transform: scale(0);
-  }
-  .burger__list.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(3px, -3px);
-  }
-  .menu__icon.active {
-    transform: translate(0, 0);
-  }
-  .menu__icon {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    width: 350px;
-    height: 370px;
-    border-radius: 10px;
-    border: 2px solid black;
-    top: 120px;
-    right: 0px;
-    padding: 25px;
-    transform: translate(0px, 0px);
-    background-color: var(--white-color);
-    margin-right: 10px;
-    transition: transform 0.3s ease 0s;
-    transform: translate(120%, 0);
-  }
+.menu__list :not(:last-child) {
+  margin-right: 15px;
 }
+.menu__link {
+  font-family: Humanst521BT;
+  color: var(--white-color);
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 118.9189189189%;
+}
+
 [class*=__container] {
   max-width: 1430px;
   margin: 0 auto;
@@ -300,6 +240,9 @@ body._lock {
   height: 100vh;
   display: flex;
 }
+.home__swiper--wrapper {
+  position: relative;
+}
 .home__swiper--slide:nth-child(1) {
   background: var(--blue-bg-color);
 }
@@ -318,10 +261,81 @@ body._lock {
   bottom: 0;
   width: 100%;
 }
-
 .home__main {
-  display: block;
-  flex: 1 1 100%;
+  position: relative;
+  z-index: 10;
+}
+.home__main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.home__main-content--ls {
+  position: relative;
+  flex: 1 1 40%;
+  flex-basis: calc(100% - 623px);
+  max-width: 464px;
+}
+.home__main-content--ls img:nth-child(1) {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 5;
+}
+.home__main-content--ls img:nth-child(2) {
+  position: absolute;
+  top: 30px;
+  left: 60%;
+  transform: translate(-60%, 0);
+  z-index: 4;
+}
+.home__main-content--ls img:nth-child(3) {
+  position: absolute;
+  bottom: 50px;
+  right: -50px;
+  z-index: 5;
+}
+.home__main-content--rs {
+  display: flex;
+  flex-direction: column;
+  max-width: 623px;
+}
+.home__main--title {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.home__main--text {
+  font-family: Roboto;
+  color: var(--blackLight-text-color);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 116%;
+  text-align: left;
+  margin-bottom: 90px;
+}
+.home__main--btn {
+  margin: 0 auto;
+  font-family: Humanst521BT;
+  color: var(--blur-white-text);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  padding: 16px 28px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--darkOrange-color);
+  transition: background-color 0.4s;
+  will-change: background-color;
+  border-radius: 20px;
+  max-width: 325px;
+}
+.home__main--btn:hover {
+  background-color: #a24419;
 }
 
 .food__bg--grain-1 {
