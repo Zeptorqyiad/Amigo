@@ -23,7 +23,7 @@
 	&__list {
 		@include flexbox;
 		:not(:last-child) {
-			margin-right: 15px;
+			margin-right: 20px;
 		}
 	}
 	&__link {
