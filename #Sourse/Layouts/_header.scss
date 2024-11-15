@@ -1,6 +1,7 @@
 @import "../components/mixins";
 
 //=======================================================================
+
 .header {
 	&__container {
 		@include flexbox;
