@@ -4,6 +4,12 @@
 	padding: 0 15px;
 }
 
+[class*="&_container"] {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
 .wrapper {
 	overflow: hidden;
 	display: flex;

@@ -229,13 +229,24 @@
 		&_fouthPage {
 			@include flexbox;
 			flex-direction: column;
-			// gap: 105px;
 		}
 		&_fouthPage--ls {
 			max-width: 462px;
+			h3 {
+				@include textDefault($ff2, var(--white-color), 40px, 700, 38px);
+				text-align: left;
+				max-width: 400px;
+				margin-bottom: 30px;
+			}
 		}
 		&_fouthPage--rs {
+			position: relative;
 			width: 720px;
+			h3 {
+				@include textDefault($ff1, var(--blackLight-text-color), 40px, 700, 47px);
+				text-align: left;
+				margin-bottom: 25px;
+			}
 		}
 	}
 }
@@ -282,26 +293,138 @@
 .fouthPage__animal {
 	&_type {
 		&--chooseBlock {
+			margin-top: 12px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-left: 55px;
+			span {
+				@include textDefault($ff1, var(--white-color), 14px, 500, 16px);
+				text-align: center;
+				padding: 4px 10px;
+				background-color: var(--darkOrange-color);
+				border-radius: 10px;
+				border: none;
+				cursor: pointer;
+			}
 		}
 	}
 	&--label {
+		@include textDefault($ff2, var(--white-color), 24px, 700, 29px);
+		text-align: left;
 	}
 	&_weight {
+		margin-top: 10px;
 		&--polzunok {
+			margin-left: 55px;
+			margin-top: 20px;
+			input {
+				width: 234px;
+				height: 2px;
+				accent-color: #af421f;
+				margin-bottom: 20px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				::-webkit-slider-runnable-track {
+					height: 2px;
+				}
+			}
 		}
 	}
 	&_ration {
+		@include flexbox;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 34px;
+		span {
+			@include textDefault($ff1, var(--white-color), 20px, 400, 23px);
+			text-align: left;
+			margin-left: 55px;
+		}
 	}
 	&--btn {
+		box-sizing: content-box;
+		padding: 17px 24px;
+		border-radius: 15px;
+		border: none;
+		background: var(--darkOrange-color);
+		@include textDefault($ff1, var(--white-color), 20px, 800, 23px);
+		transition: background 0.5s;
+		will-change: background;
+		cursor: pointer;
+		text-align: center;
 	}
+}
+.fouthPage {
 	&__recomendedRation {
+		@include textDefault($ff1, var(--blackLight-text-color), 24px, 250, 28px);
+		text-align: left;
+		margin-bottom: 60px;
+		&--recomedationsText {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include textDefault($ff2, var(--blackLight-text-color), 14px, 400, 17px);
+			text-align: left;
+			max-width: 260px;
+			span {
+				font-weight: 800;
+			}
+		}
+	}
+	&__footer {
+		display: none;
 	}
 	&__content-bottom {
+		margin-top: 40px;
+		@include flexbox;
+		justify-content: space-between;
 	}
 	&__blocktext {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		@include textDefault($ff1, var(--black-color), 15px, 400, 20px);
+		text-align: left;
+		max-width: 355px;
+		a {
+			@include textDefault($ff1, var(--black-color), 15px, 400, 20px);
+			text-align: left;
+			cursor: pointer;
+		}
 	}
 	&__inputBlock {
+		@include flexbox;
+		align-items: center;
+		max-height: 56px;
+		input {
+			min-height: 56px;
+			min-width: 280px;
+			box-sizing: border-box;
+			border: 1px solid rgb(175, 66, 31);
+			border-radius: 14px 0px 0px 14px;
+			background-color: transparent;
+			@include textDefault($ff1, var(--black-color), 18px, 500, 25px);
+			text-align: left;
+			padding: 12px 25px 12px 35px;
+		}
+		button {
+			max-height: 56px;
+			border-radius: 0px 14px 14px 0px;
+			background: var(--darkOrange-color);
+			padding: 20px 35px;
+			@include textDefault($ff1, var(--white-color), 18px, 400, 21px);
+			text-align: center;
+		}
 	}
+}
+.home__input::placeholder {
+	color: #af421f;
+	font-weight: 700;
+}
+span.active-type {
+	background-color: var(--green-bg-color);
 }
 
 //=======================================================================

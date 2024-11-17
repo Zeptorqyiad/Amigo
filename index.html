@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link href="https://myfonts.ru/myfonts?fonts=humanst521-bt" rel="stylesheet" type="text/css" />
 	<!-- <link rel="icon" href="img/" type="image/x-icon"> -->
-	<title>Amigo</title>
+	<title>Amigo - Главная страница</title>
 </head>
 
 <body>
@@ -296,7 +296,7 @@
 								<div class="fouthPage__animal_type">
 									<p class="fouthPage__animal--label">Тип</p>
 									<div class="fouthPage__animal_type--chooseBlock">
-										<span>Крыса</span>
+										<span class="active-type">Крыса</span>
 										<span>Хомяк</span>
 										<span>Кролик</span>
 										<span>Попугай</span>
@@ -319,17 +319,19 @@
 							<div class="home__main_fouthPage--rs">
 								<h3>Рекомендации</h3>
 								<div class="fouthPage__recomendedRation">
-									<p>
-										Суточная норма кормления зависит от размера морской свинки и составляет 35-50 г в день.
-										Питомец должен съедать до следущего кормления основную часть корма.
-										Кормите два-три раза в день в одно и то же время. Следите за тем , чтобы у питомца всегда
-										были в доступе сено и свежая вода.
-										Новый корм вводится в рацион понемногу, начиная с небольшой порции
-										постепенно увеличивая объём, доведя его до нормы.
-									</p>
+									Суточная норма кормления зависит от размера морской свинки и составляет 35-50 г в день.
+									Питомец должен съедать до следущего кормления основную часть корма.
+									<br />
+									<br />
+									Кормите два-три раза в день в одно и то же время. Следите за тем , чтобы у питомца всегда
+									были в доступе сено и свежая вода.
+									<br />
+									<br />
+									Новый корм вводится в рацион понемногу, начиная с небольшой порции
+									постепенно увеличивая объём, доведя его до нормы.
 								</div>
 								<img src="./assets/icon/ration.png" alt="Ration">
-								<p>
+								<p class="fouthPage__recomendedRation--recomedationsText">
 									Рекомендации по переходу на новый корм
 									Только для товаров <span>AMIGO</span>
 								</p>
@@ -337,20 +339,20 @@
 						</div>
 						<div class="fouthPage__content-bottom">
 							<div class="fouthPage__blocktext">
-								<span>
-									620007, РФ, Свердловская обл., г.Екатеринбург, ул. Сибирский тракт 14-й километр, д.30, ИНН:
-									6658370770
-								</span>
+								620007, РФ, Свердловская обл., г.Екатеринбург, ул. Сибирский тракт 14-й километр, д.30,
+								<br />
+								ИНН: 6658370770
 								<a href="tel:83433453432">+7 (343) 345-34-32</a>
 							</div>
 							<form method="POST" class="fouthPage__inputBlock">
-								<input type="email" placeholder="Email" name="email" id="emailInput" required>
+								<input class="home__input" type="email" placeholder="Email" name="email" id="emailInput"
+									required>
 								<button type="submit">Узнать о нас больше</button>
 							</form>
 						</div>
 					</div>
 				</main>
-				<footer class="home--footer">
+				<footer class="home--footer fouthPage__footer">
 					<img class="food__bg--grain" src="./assets/img/footer/footerGrains3.png" alt="footerGrains">
 				</footer>
 			</section>

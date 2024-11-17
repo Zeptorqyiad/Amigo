@@ -1,0 +1,85 @@
+@import "../components/mixins";
+
+//=======================================================================
+.footer__color,
+.header__color {
+	background: var(--mandarin-bg-color);
+}
+.footer__assortment {
+	position: relative;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 353px;
+	img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+//=======================================================================
+.main__assortment {
+	height: 100%;
+	background-image: url("../../assets/img/main/bg-image.svg");
+	background-repeat: repeat;
+	background-size: auto;
+	&--title {
+		margin: 50px 0 15px 0;
+		@include flexbox;
+		justify-content: center;
+		@include textDefault($ff2, var(--blackLight-text-color), 45px, 700, 54px);
+		text-transform: uppercase;
+	}
+	&--wrapper {
+		background: var(--white-color);
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		padding: 27px 48px 32px 47px;
+		margin-bottom: 100px;
+	}
+}
+
+.assortment__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 292px);
+	justify-items: center;
+	justify-content: space-around;
+	row-gap: 70px;
+	&--item {
+		max-width: 243px;
+		@include flexbox;
+		flex-direction: column;
+		gap: 25px;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+}
+.grid--item_image {
+	@include flexbox;
+	justify-content: center;
+	height: 221px !important;
+	width: 100%;
+	padding: 5px;
+	background: inherit;
+	transition: background 0.5s;
+	will-change: background;
+	img {
+		object-fit: contain;
+	}
+}
+.grid--item_image:hover {
+	box-sizing: border-box;
+	border: 1px solid #dfdfdf;
+	border-radius: 15px;
+	box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.251);
+	background: #ffffff;
+}
+.grid--item_desc {
+	max-width: 80%;
+	@include textDefault($ff1, var(--blackLight-text-color), 18px, 400, 21px);
+	text-align: center;
+}
