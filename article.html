@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://myfonts.ru/myfonts?fonts=humanst521-bt" rel="stylesheet" type="text/css" />
+	<!-- <link rel="icon" href="img/" type="image/x-icon"> -->
+	<title>Узнать больше</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header__color">
+			<div class="header__container">
+				<!-- logotype -->
+				<a href="./index.html" class="header__logo">
+					<img src="./assets/img/header/Logotype.png" alt="Logotype">
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="./about.html" class="menu__link">О нас</a></li>
+							<li><a href="./assortment.html" class="menu__link">Ассортимент</a></li>
+							<li><a href="./article.html" class="menu__link">Узнай больше</a></li>
+							<li><a href="./WhereBuy.html" class="menu__link">Где купить</a></li>
+							<li><a href="./Contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header--burger__list">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<main class="main__assortment main__article">
+			<div class="main__article--wrapper" style="max-width: 1240px; margin: 0 auto;">
+				<!-- Blog filter -->
+				<ul class="main__article--filterlist">
+					<li class="main__article--filteritem active-filter">Все</li>
+					<li class="main__article--filteritem">Полезное о корме</li>
+					<li class="main__article--filteritem">Статьи</li>
+				</ul>
+				<!-- Blog list -->
+				<section class="main__article--bloglist">
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="background-color: var(--darkOrange-color);">
+						<img src="./assets/img/main/blog1.png" alt="blogImage">
+						<div class="main__article--title">Крысы: полезные хищники или опасные вредители?</div>
+						<span class="main__article--desc">#статья</span>
+					</a>
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="background-color: var(--lightContrast-bg-color); ">
+						<img src="./assets/img/main/blog2.png" alt="blogImage">
+						<div class="main__article--title">Успей купить! Два кролика по цене одного</div>
+						<span class="main__article--desc">#акции</span>
+					</a>
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="background-color: var(--pink-bg-color);">
+						<img src="./assets/img/main/blog3.png" alt="blogImage">
+						<div class="main__article--title">Как и чем кормить хомяка?</div>
+						<span class="main__article--desc">#вопросы</span>
+					</a>
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="width: 254px;background-color: var(--blue-bg-color);"></a>
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="width: 337px;background-color: var(--orange-bg-color);"></a>
+					<a href="./learnMore.html" class="main__article--blogitem"
+						style="width: 425px;background-color: var(--pink-bg-color);"></a>
+				</section>
+			</div>
+			<!-- Button showcase -->
+			<a class="button button--article">Загрузить еще</a>
+		</main>
+		<footer class="footer__assortment footer__color">
+			<div class="fouthPage__content-bottom __container">
+				<div class="fouthPage__blocktext">
+					620007, РФ, Свердловская обл., г.Екатеринбург, ул. Сибирский тракт 14-й километр, д.30,
+					<br />
+					ИНН: 6658370770
+					<a href="tel:83433453432">+7 (343) 345-34-32</a>
+				</div>
+				<form method="POST" class="fouthPage__inputBlock">
+					<input class="home__input" type="email" placeholder="Email" name="email" id="emailInput" required>
+					<button type="submit">Узнать о нас больше</button>
+				</form>
+			</div>
+			<img style="max-height: 141px;" class="food__bg--grain" src="./assets/img/footer/footerGrains.png"
+				alt="footerGrains">
+		</footer>
+	</div>
+
+	<!-- Подключаем файл JS скриптов -->
+	<script src="./js/script.js"></script>
+	<script src="./js/inputValidate.js"></script>
+	<script src="./js/mailSender.js"></script>
+</body>
+
+</html>

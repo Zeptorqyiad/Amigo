@@ -26,3 +26,23 @@ body {
 body._lock {
 	overflow: hidden;
 }
+
+.button {
+	padding: 15px 63px;
+	background: var(--darkOrange-color);
+	border-radius: 15px;
+	@include textDefault($ff1, var(--white-color), 20px, 800, 24px);
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.3s;
+	will-change: background;
+	&--article {
+		@include flexbox;
+		margin: 0 auto;
+		max-width: 275px;
+		margin-top: 30px;
+		&:hover {
+			background: #eb7f4d;
+		}
+	}
+}

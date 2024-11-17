@@ -28,10 +28,18 @@
 		}
 	}
 	&__link {
+		position: relative;
 		@include textDefault($ff2, var(--white-color), 37px, 400, 44px);
+		background: linear-gradient(currentColor 0 0) var(--pdu, 0) 100% / var(--tdu, 0) 3px no-repeat;
+		transition:
+			0.3s,
+			background-position 0s 0.3s;
+		&:hover {
+			--tdu: 100%;
+			--pdu: 100%;
+		}
 	}
 }
-
 //=======================================================================
 
 //================================Burger List============================

@@ -1,0 +1,72 @@
+@import "../components/mixins";
+
+//=======================================================================
+
+.main__article {
+	height: 100%;
+	padding: 40px 0 100px 0;
+	&--wrapper {
+		@include flexbox;
+		flex-direction: column;
+		gap: 36px;
+		padding: 14px 47px 20px 42px;
+		background: var(--white-color);
+		width: 100%;
+		border-radius: 15px;
+	}
+	&--filterlist {
+		@include flexbox;
+		gap: 33px;
+		flex-wrap: wrap;
+	}
+	&--filteritem {
+		padding: 2px 13px;
+		box-sizing: border-box;
+		border: 1px solid #ababab;
+		border-radius: 8.97px;
+		background: var(--white-color);
+		cursor: pointer;
+		@include textDefault($ff1, var(--blackLight-text-color), 17px, 500, 21px);
+		text-align: center;
+	}
+	&--bloglist {
+		width: 100%;
+		@include flexbox;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 50px;
+	}
+	&--blogitem {
+		position: relative;
+		height: 222px !important;
+		border-radius: 15px;
+		@include flexbox;
+		gap: 20px;
+		align-items: center;
+		img {
+			height: 100%;
+			object-fit: contain;
+			border-radius: 15px;
+		}
+	}
+	&--title {
+		@include textDefault($ff1, var(--blackLight-text-color), 20px, 400, 24px);
+		text-align: left;
+		max-width: 146px;
+	}
+	&--desc {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		@include textDefault($ff1, var(--blackLight-text-color), 13px, 400, 16px);
+		text-align: center;
+	}
+}
+
+.active-filter {
+	box-sizing: border-box;
+	border: 1px solid rgb(171, 171, 171);
+	border-radius: 8.97px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	background: rgb(236, 181, 155);
+}
