@@ -6,24 +6,58 @@
 	background: var(--orange-bg-color);
 }
 .footer__whereBuy {
-	position: fixed;
+	position: relative;
 	height: 332px;
-	bottom: 0;
-	left: 0;
 	width: 100%;
 	img {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		bottom: 0;
 		left: 0;
+		bottom: 0;
 	}
 }
 .main__whereBuy {
 	&--title {
+		@include textDefault($ff2, var(--black-color), 36px, 700, 43px);
+		text-align: center;
 	}
 	&--links {
+		@include flexbox;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 30px;
+		max-width: 1045px;
+		margin: 120px auto;
 	}
 	&--itemLink {
+		position: relative;
+		img {
+			width: 322px;
+			height: 178px;
+		}
+		span {
+			position: absolute;
+			bottom: 13px;
+			left: 5px;
+			z-index: 10;
+			@include textDefault($ff2, var(--white-color), 22px, 700, 26px);
+			text-align: left;
+		}
+	}
+}
+.main__whereBuy--itemLink[name="WB"] {
+	position: relative;
+	&::after {
+		content: "";
+		background-image: url("../../assets/icon/wb.png");
+		background-position: right top;
+		background-size: auto;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 8px;
+		right: 12px;
 	}
 }

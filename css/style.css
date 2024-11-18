@@ -1133,16 +1133,187 @@ span.active-type {
 }
 
 .footer__whereBuy {
-  position: fixed;
+  position: relative;
   height: 332px;
-  bottom: 0;
-  left: 0;
   width: 100%;
 }
 .footer__whereBuy img {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+}
+
+.main__whereBuy--title {
+  font-family: Humanst521BT;
+  color: var(--black-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 119.4444444444%;
+  text-align: center;
+}
+.main__whereBuy--links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1045px;
+  margin: 120px auto;
+}
+.main__whereBuy--itemLink {
+  position: relative;
+}
+.main__whereBuy--itemLink img {
+  width: 322px;
+  height: 178px;
+}
+.main__whereBuy--itemLink span {
+  position: absolute;
+  bottom: 13px;
+  left: 5px;
+  z-index: 10;
+  font-family: Humanst521BT;
+  color: var(--white-color);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 118.1818181818%;
+  text-align: left;
+}
+
+.main__whereBuy--itemLink[name=WB] {
+  position: relative;
+}
+.main__whereBuy--itemLink[name=WB]::after {
+  content: "";
+  background-image: url("../../assets/icon/wb.png");
+  background-position: right top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 8px;
+  right: 12px;
+}
+
+.contacts__wrapper {
+  background: var(--green-bg-color);
+}
+
+.main__contacts {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 140px;
+}
+.main__contacts--ls {
+  max-width: 635px;
+  text-align: left;
+}
+.main__contacts--rs {
+  flex-basis: 423px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__blocktext--title {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 119.4444444444%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contacts__blocktext--adress {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 118.75%;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.contacts__blocktext--callback {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 119.4444444444%;
+  text-align: left;
+  margin-bottom: 38px;
+}
+.contacts__blocktext a {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 118.75%;
+  text-align: left;
+}
+
+.contacts__form--title {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 119.4444444444%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contacts__form--input {
+  max-width: 344px;
+  background-color: inherit;
+  width: 100%;
+  padding: 11px 20px 9px 14px;
+  border: 1px solid var(--blackLight-text-color);
+  border-radius: 13px;
+  font-family: Humanst521BT;
+  color: var(--black-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+}
+.contacts__form--input::-moz-placeholder {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 122.2222222222%;
+  text-align: left;
+}
+.contacts__form--input::placeholder {
+  font-family: Humanst521BT;
+  color: var(--blackLight-text-color);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 122.2222222222%;
+  text-align: left;
+}
+.contacts__form--btn {
+  max-width: 344px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3b372a;
+  font-family: Humanst521BT;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+  border-radius: 12px;
+  border: none;
+  padding: 13px 0;
+  transition: background 0.3s;
+  will-change: background;
+}
+
+.contacts__form--btn:hover {
+  background: #56503e;
 }
