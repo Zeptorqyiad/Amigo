@@ -1522,19 +1522,23 @@ span.active-type {
 }
 
 .tabs {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 
 .tabs > input[type=radio] {
   display: none;
 }
 
+.label-tabs {
+  cursor: pointer;
+}
+
 .tab-content {
   display: none;
+  width: 1210px;
 }
 .tab-content--gridList {
   margin-top: 50px;
-  min-width: 1120px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -1581,6 +1585,15 @@ span.active-type {
   display: block;
 }
 
+#content-3 {
+  font-family: Roboto;
+  color: var(--blackLight-text-color);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 116.6666666667%;
+  text-align: center;
+}
+
 .nutritionalValue {
   display: flex;
   min-width: 1430px;
@@ -1610,6 +1623,7 @@ span.active-type {
   font-weight: 250;
   line-height: 116.6666666667%;
   text-align: left;
+  padding-left: 100px;
 }
 
 .whereBuy-product h4 {
