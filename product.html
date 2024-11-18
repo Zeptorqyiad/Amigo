@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://myfonts.ru/myfonts?fonts=humanst521-bt" rel="stylesheet" type="text/css" />
+	<!-- <link rel="icon" href="img/" type="image/x-icon"> -->
+	<title>Узнать больше</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header id="bgColor" class="header header__color">
+			<div class="header__container">
+				<!-- logotype -->
+				<a href="./index.html" class="header__logo">
+					<img src="./assets/img/header/Logotype.png" alt="Logotype">
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+						<a href=""><span></span></a>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="./about.html" class="menu__link">О нас</a></li>
+							<li><a href="./assortment.html" class="menu__link">Ассортимент</a></li>
+							<li><a href="./article.html" class="menu__link">Узнай больше</a></li>
+							<li><a href="./WhereBuy.html" class="menu__link">Где купить</a></li>
+							<li><a href="./Contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header--burger__list">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<main class="product">
+			<div class="product__content">
+				<a href="./assortment.html" class="product__wrapper--goBack">ВЕРНУТЬСЯ НАЗАД</a>
+				<section class="product__wrapper">
+					<div class="product__wrapper--slider">
+						<div class="swiper preview-swiper">
+							<div class="swiper-wrapper preview-wrapper">
+								<div class="swiper-slide preview-slide">
+									<img src="./assets/img/food/1.png" alt="Food">
+								</div>
+								<div class="swiper-slide preview-slide">
+									<img src="./assets/img/food/1.png" alt="Food">
+								</div>
+								<div class="swiper-slide preview-slide">
+									<img src="./assets/img/food/1.png" alt="Food">
+								</div>
+							</div>
+							<div class="swiper-pagination preview-pagination"></div>
+						</div>
+					</div>
+					<div class="product__wrapper--infoblock">
+						<div class="infoblock--blocktext">
+							<h3 id="productTitle">КОРМ ДЛЯ КРОЛИКОВ И ШИНШИЛЛ</h3>
+							<p id="productDesc">
+								это сбалансированный полнорационный корм, разработанный в соответствии с пищевыми потребностями
+								кролика, который содержит качественные ингредиенты и все необходимые для организма питательные
+								вещества, витамины, минералы и аминокислоты, способные обеспечить хорошее самочувствие вашего
+								питомца.
+							</p>
+						</div>
+						<div class="infoblock--value">
+							<span>400 г</span>
+							<span>800 г</span>
+						</div>
+					</div>
+				</section>
+				<section class="advantages __container">
+					<h4>Преимущества</h4>
+					<ul class="advantages__list">
+						<li class="advantages__list--item">
+							<img src="./assets/icon/1.png" alt="advantages">
+							<span>100% натуральный и сбалансированный состав</span>
+						</li>
+						<li class="advantages__list--item">
+							<img src="./assets/icon/4.png" alt="advantages">
+							<span>Пробиотики укрепляют иммунитет</span>
+						</li>
+						<li class="advantages__list--item">
+							<img src="./assets/icon/2.png" alt="advantages">
+							<span>Юкка шидигера для устранения неприятного запаха</span>
+						</li>
+						<li class="advantages__list--item">
+							<img src="./assets/icon/5.png" alt="advantages">
+							<span>Ферменты улучшают работу ЖКТ</span>
+						</li>
+						<li class="advantages__list--item">
+							<img src="./assets/icon/3.png" alt="advantages">
+							<span>Витамины и минералы для здоровья</span>
+						</li>
+						<li class="advantages__list--item">
+							<img src="./assets/icon/6.png" alt="advantages">
+							<span>Адсорбенты выводят токсины</span>
+						</li>
+					</ul>
+				</section>
+				<hr class="__container" style="width: 100%;border: 1px solid rgb(248, 125, 75);margin-bottom: 45px;">
+				<section class="tabs __container">
+					<input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+					<label for="tab-btn-1">Вкладка 1</label>
+					<input id="tab-btn-2" name="tab-btn" type="radio" value="">
+					<label for="tab-btn-2">Вкладка 2</label>
+					<input id="tab-btn-3" name="tab-btn" type="radio" value="">
+					<label for="tab-btn-3">Вкладка 3</label>
+					<div class="tab-content" id="content-1">
+						<ul class="tab-content--gridList">
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure1.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure2.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure1.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure2.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure2.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure1.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure2.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure1.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure2.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+							<li class="tab-content--gridItem">
+								<img src="./assets/img/food/structure3.png" alt="structure">
+								<div class="tab-content__info">
+									<p>яйца и яичные продукты</p>
+									<span>5%</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content" id="content-2">
+						Содержимое 2...
+					</div>
+					<div class="tab-content" id="content-3">
+						Содержимое 3...
+					</div>
+				</section>
+				<section class="nutritionalValue &_container">
+					<div class="nutritionalValue--ls">
+						<h4 class="nutritionalValue--title">Пищевая ценность</h4>
+						<p id="nutritionalText" class="nutritionalValue--text">
+							белки - 14%, жиры - 4%, клетчатка - 14,5%, зола - 7%, влажность не более 10%
+						</p>
+					</div>
+					<img src="./assets/img/anim/10.png" alt="">
+				</section>
+				<hr class="__container" style="width: 100%;border: 1px solid rgb(248, 125, 75);margin-bottom: 60px;">
+				<section>
+					<div class="whereBuy-product __container">
+						<h4>
+							ГДЕ КУПИТЬ?
+						</h4>
+						<article style="margin-top: 50px;" class="main__whereBuy--links">
+							<a href="##" class="main__whereBuy--itemLink">
+								<img src="./assets/img/main/linkBuy.png" alt="Заповедник">
+								<span>КУПИТЬ AMIGO <br> НА САЙТЕ ЗАПОВЕДНИК</span>
+							</a>
+							<a href="##" class="main__whereBuy--itemLink" name="WB">
+								<img src="./assets/img/main/linkBuy2.png" alt="WILDBERRIES">
+								<span>КУПИТЬ AMIGO <br> НА WILDBERRIES</span>
+							</a>
+							<a href="##" class="main__whereBuy--itemLink" name="OZON">
+								<img src="./assets/icon/ozon.png" alt="OZON">
+							</a>
+						</article>
+					</div>
+				</section>
+				<img src="./assets/icon/grass.png" style="margin-bottom: -60px;" alt="">
+			</div>
+		</main>
+		<footer id="bgColor" class="footer__assortment footer__color footer__product">
+			<div class="fouthPage__content-bottom __container">
+				<div class="fouthPage__blocktext">
+					620007, РФ, Свердловская обл., г.Екатеринбург, ул. Сибирский тракт 14-й километр, д.30,
+					<br />
+					ИНН: 6658370770
+					<a href="tel:83433453432">+7 (343) 345-34-32</a>
+				</div>
+				<form method="POST" class="fouthPage__inputBlock">
+					<input class="home__input" type="email" placeholder="Email" name="email" id="emailInput" required>
+					<button type="submit">Узнать о нас больше</button>
+				</form>
+			</div>
+			<img style="max-height: 121px;" class="food__bg--grain" src="./assets/img/footer/footerGrains.png"
+				alt="footerGrains">
+		</footer>
+	</div>
+
+	<!-- Подключаем файл JS скриптов -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- Подключаем скрипты -->
+	<script src="./js/swiper.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/inputValidate.js"></script>
+	<script src="./js/mailSender.js"></script>
+</body>
+
+</html>

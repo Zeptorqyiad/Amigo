@@ -93,7 +93,8 @@ $ff2: Humanst521BT;
 @import "./Layouts/assortment";
 @import "./Layouts/article";
 @import "./Layouts/whereBuy";
-@import "./Layouts/_contacts";
+@import "./Layouts/contacts";
+@import "./Layouts/product";
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
 @import "./components/ui";
@@ -102,3 +103,4 @@ $ff2: Humanst521BT;
 // TODO: about.page Swiper сделать
 // TODO: Сделать калькулятор на fouthPage home
 // TODO: Сделать фон для страниц с шариками
+// TODO: Сдвинуть вправо блок преимущества

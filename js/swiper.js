@@ -27,3 +27,13 @@ let foodSwiper = new Swiper('.food__swiper', {
       swiper: swiperThumb,
    },
 })
+
+let previewSwiper = new Swiper('.preview-swiper', {
+   spaceBetween: 10,
+   // direction: 'horizontal',
+   loop: true,
+   // If we need pagination
+   pagination: {
+      el: '.preview-pagination',
+   },
+})

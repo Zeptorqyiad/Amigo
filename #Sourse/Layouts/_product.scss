@@ -1,0 +1,200 @@
+@import "../components/mixins";
+
+//=======================================================================
+
+.product {
+	position: relative;
+	&__content {
+		position: relative;
+		@include flexbox;
+		flex-direction: column;
+	}
+	&__wrapper {
+		@include flexbox;
+		&--goBack {
+			@include textDefault($ff1, var(--black-color), 15px, 400, 18px);
+			text-align: left;
+			position: absolute;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTguMDAzOTA2IiBoZWlnaHQ9IjEzLjMyMTg4NCIgdmlld0JveD0iMCAwIDE4LjAwMzkgMTMuMzIxOSIgZmlsbD0ibm9uZSIKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgoKCTxkZWZzIC8+Cgk8cGF0aCBpZD0iQXJyb3cgNiIKCQlkPSJNMy40MSA3LjY2TDcuMzYgMTEuNjFDNy43NiAxMiA3Ljc2IDEyLjYyIDcuMzYgMTMuMDJDNi45NyAxMy40MiA2LjM0IDEzLjQyIDUuOTUgMTMuMDJMMC4yOSA3LjM2Qy0wLjEgNi45NyAtMC4xIDYuMzQgMC4yOSA1Ljk1TDUuOTUgMC4yOUM2LjM0IC0wLjEgNi45NyAtMC4xIDcuMzYgMC4yOUM3Ljc2IDAuNjkgNy43NiAxLjMxIDcuMzYgMS43MUwzLjQxIDUuNjZMMTggNS42NkwxOCA3LjY2TDMuNDEgNy42NloiCgkJZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxLjAwMDAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=");
+			background-size: auto;
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding-left: 30px;
+			top: 30px;
+			left: 120px;
+		}
+		&--slider {
+			width: 40%;
+			margin-top: 80px;
+		}
+		&--infoblock {
+			width: 60%;
+		}
+	}
+}
+.infoblock {
+	&--blocktext {
+		@include flexbox;
+		flex-direction: column;
+		gap: 50px;
+		padding: 80px 90px 23px 30px;
+		background: var(--lightContrast-orange-color);
+		margin-bottom: 45px;
+		h3 {
+			@include textDefault($ff2, var(--black-color), 40px, 700, 48px);
+			text-align: left;
+			max-width: 560px;
+		}
+		p {
+			@include textDefault($ff1, var(--black-color), 24px, 250, 29px);
+			text-align: left;
+			max-width: 730px;
+		}
+	}
+	&--value {
+		@include flexbox;
+		gap: 50px;
+		span {
+			@include textDefault($ff1, var(--black-color), 25px, 500, 29px);
+			text-align: left;
+			box-sizing: border-box;
+			border: 2px solid rgb(229, 222, 211);
+			border-radius: 12.92px;
+			padding: 3px 21px;
+			cursor: pointer;
+		}
+	}
+}
+
+.preview {
+	&-swiper {
+		height: 90%;
+		width: 360px;
+	}
+	&-slide {
+		display: flex;
+		justify-content: center;
+		max-height: 350px;
+		max-width: 493px;
+	}
+	&-pagination {
+	}
+}
+
+//================================Advanteges==============================
+
+.advantages {
+	margin-top: 100px;
+	margin-bottom: 80px;
+	position: relative;
+	h4 {
+		text-transform: uppercase;
+		@include textDefault($ff2, var(--blackLight-text-color), 40px, 700, 48px);
+		text-align: left;
+		margin-bottom: 36px;
+	}
+	&__list {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-between;
+		row-gap: 30px;
+		column-gap: 50px;
+		&--item {
+			@include flexbox;
+			align-items: center;
+			gap: 25px;
+			img {
+				width: 64px;
+			}
+			span {
+				@include textDefault($ff1, var(--blackLight-text-color), 20px, 700, 23px);
+				text-align: left;
+			}
+		}
+	}
+}
+
+//=======================================================================
+.tabs {
+	margin-bottom: 80px;
+}
+.tabs > input[type="radio"] {
+	display: none;
+}
+
+.tab-content {
+	display: none;
+	&--gridList {
+		margin-top: 50px;
+		min-width: 1120px;
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-between;
+		gap: 10px;
+	}
+	&--gridItem {
+		@include flexbox;
+		align-items: center;
+		gap: 20px;
+		img {
+			width: 165px;
+			height: 46px;
+			object-fit: cover;
+			border-radius: 50px;
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		p {
+			@include textDefault($ff1, var(--black-color), 20px, 400, 23px);
+
+			text-align: left;
+		}
+		span {
+			@include textDefault($ff1, var(--blue-bg-color), 20px, 400, 23px);
+			text-align: left;
+		}
+	}
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3 {
+	display: block;
+}
+
+//=======================================================================
+
+.nutritionalValue {
+	@include flexbox;
+	min-width: 1430px;
+	align-items: flex-end;
+	margin-bottom: 30px;
+	justify-content: space-between;
+	&--ls {
+		@include flexbox;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 23px;
+	}
+	&--title {
+		text-transform: uppercase;
+		@include textDefault($ff2, var(--blackLight-text-color), 40px, 700, 48px);
+		text-align: center;
+	}
+	&--text {
+		@include textDefault($ff1, var(--blackLight-text-color), 24px, 250, 28px);
+		text-align: left;
+	}
+}
+
+.whereBuy-product {
+	h4 {
+		@include textDefault($ff2, var(--blackLight-text-color), 40px, 700, 48px);
+		text-align: left;
+	}
+}
