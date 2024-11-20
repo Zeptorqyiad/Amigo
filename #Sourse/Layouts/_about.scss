@@ -142,7 +142,7 @@
 	box-sizing: border-box;
 	border: 10px solid var(--white-color);
 	border-radius: 50px;
-	background: rgb(217, 217, 217);
+	background: #d9d9d9;
 }
 .food__swiper-thumb {
 	width: 100%;
@@ -153,6 +153,8 @@
 .food__swiper-wrapper {
 	max-height: 367px;
 	@include flexbox;
+	gap: 145px;
+	padding-left: 70px;
 }
 .food__swiper-slide {
 	max-width: 263px;
@@ -180,7 +182,7 @@
 .food__swiper-slide img {
 	margin-top: 40px;
 	display: block;
-	width: 100%;
+	width: 263px;
 	height: 100%;
 	object-fit: contain;
 }

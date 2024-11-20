@@ -1,4 +1,4 @@
-@import "../components/ui";
+@import "../components/mixins";
 
 //=======================================================================
 //=======================================================================
@@ -37,7 +37,7 @@
 	position: relative;
 	z-index: 9999;
 	padding: 62px 50px 55px 50px;
-	background-color: white; // var()
+	background-color: white;
 	color: #000;
 	max-width: 569px;
 	border-radius: 4px;

@@ -16,7 +16,7 @@
 
 <body>
 	<div class="wrapper">
-		<header id="bgColor" class="header header__color">
+		<header id="bgColor" class="header">
 			<div class="header__container">
 				<!-- logotype -->
 				<a href="./index.html" class="header__logo">
@@ -52,29 +52,25 @@
 				<a href="./assortment.html" class="product__wrapper--goBack">ВЕРНУТЬСЯ НАЗАД</a>
 				<section class="product__wrapper">
 					<div class="product__wrapper--slider">
-						<div class="swiper preview-swiper">
+						<a href="#popup" class="swiper preview-swiper popup__link">
 							<div class="swiper-wrapper preview-wrapper">
 								<div class="swiper-slide preview-slide">
-									<img src="./assets/img/food/1.png" alt="Food">
+									<img class="previewSlide" src="" alt="Food">
 								</div>
 								<div class="swiper-slide preview-slide">
-									<img src="./assets/img/food/1.png" alt="Food">
+									<img class="previewSlide" src="" alt="Food">
 								</div>
 								<div class="swiper-slide preview-slide">
-									<img src="./assets/img/food/1.png" alt="Food">
+									<img class="previewSlide" src="" alt="Food">
 								</div>
 							</div>
 							<div class="swiper-pagination preview-pagination"></div>
-						</div>
+						</a>
 					</div>
 					<div class="product__wrapper--infoblock">
-						<div class="infoblock--blocktext">
-							<h3 id="productTitle">КОРМ ДЛЯ КРОЛИКОВ И ШИНШИЛЛ</h3>
+						<div id="bgInfoBlock" class="infoblock--blocktext">
+							<h3 id="productTitle"></h3>
 							<p id="productDesc">
-								это сбалансированный полнорационный корм, разработанный в соответствии с пищевыми потребностями
-								кролика, который содержит качественные ингредиенты и все необходимые для организма питательные
-								вещества, витамины, минералы и аминокислоты, способные обеспечить хорошее самочувствие вашего
-								питомца.
 							</p>
 						</div>
 						<div class="infoblock--value">
@@ -112,15 +108,11 @@
 						</li>
 					</ul>
 				</section>
-				<hr class="__container" style="width: 100%;border: 1px solid #f87d4b;margin-bottom: 45px;">
-				<section class="tabs __container">
-					<input checked id="tab-btn-1" name="tab-btn" type="radio">
-					<label class="label-tabs" for="tab-btn-1">Состав</label>
-					<input id="tab-btn-2" name="tab-btn" type="radio">
-					<label class="label-tabs" for="tab-btn-2">Рекомендации</label>
-					<input id="tab-btn-3" name="tab-btn" type="radio">
-					<label class="label-tabs" for="tab-btn-3">Условия хранения</label>
-					<div class="tab-content" id="content-1">
+				<hr id="hr1" class="hr1 __container">
+				<section class="tabs">
+					<input type="radio" name="tabs" id="tabone" checked="checked">
+					<label for="tabone">Состав</label>
+					<div class="tab" id="content-1">
 						<ul class="tab-content--gridList">
 							<li class="tab-content--gridItem">
 								<img src="./assets/img/food/structure1.png" alt="structure">
@@ -235,14 +227,16 @@
 									белки - 14%, жиры - 4%, клетчатка - 14,5%, зола - 7%, влажность не более 10%
 								</p>
 							</div>
-							<img src="./assets/img/anim/10.png" alt="">
+							<img class="nutritionalValue--image" id="minImgTab" src="" alt="">
 						</div>
 					</div>
-					<div class="tab-content" id="content-2">
+					<input type="radio" name="tabs" id="tabtwo">
+					<label for="tabtwo">Рекомендации</label>
+					<div class="tab" id="content-2">
 						<article class="content-2__content">
 							<div class="content-2__content--ls">
 								<h5>Укажите вес питомца</h5>
-								<span>Вес, кг</span>
+								<span style="margin-left: 50px;">Вес, кг</span>
 								<div class="fouthPage__animal_weight--polzunok product--polzunok">
 									<input type="range" min="1" max="100" value="10" id="myRange">
 								</div>
@@ -251,28 +245,21 @@
 							</div>
 							<div class="content-2__content--rs">
 								<p class="content-2__content--foodNormal">Количество корма на день:</p>
-								<span id="foodCounter">212.5 грамм</span>
+								<span id="foodCounter" style="margin-left: 50px;">212.5 грамм</span>
 								<p class="content-2__content--text">
-									Суточная норма кормления зависит от размера кролика и составляет от 30 до 40 г в день на 1 кг
-									веса животного. Питомец должен съедать до следующего кормления основную часть корма.
-									<br>
-									<br>
-									Кормите два – три раза в день в одно и тоже время.
-									Позаботьтесь о постоянном наличии в клетке чистой воды.
-									<br>
-									<br>
-									Новый корм вводится в рацион понемногу, начиная с небольшой порции постепенно увеличивая
-									объём, доведя его до нормы.
+									Индивидуальный текст
 								</p>
 							</div>
 						</article>
 					</div>
-					<div class="tab-content" id="content-3">
-						Хранить в сухом помещении при температуре от 4 °С до 25 °С и относительной влажности воздуха не более
-						80%. Исключить попадание влаги и прямых солнечных лучей.
+					<input type="radio" name="tabs" id="tabthree">
+					<label for="tabthree">Условия хранения</label>
+					<div class="tab" id="content-3">
+						Хранить в сухом помещении при температуре от 4 °С до 25 °С и относительной влажности воздуха не
+						более 80%. Исключить попадание влаги и прямых солнечных лучей.
 					</div>
 				</section>
-				<hr class="__container" style="width: 100%;border: 1px solid rgb(248, 125, 75);margin-bottom: 60px;">
+				<hr id="hr2" class="hr2 __container">
 				<section>
 					<div class="whereBuy-product __container">
 						<h4>
@@ -293,10 +280,14 @@
 						</article>
 					</div>
 				</section>
-				<img src="./assets/icon/grass.png" style="margin-bottom: -60px;" alt="">
+				<img src="./assets/icon/grass.png" alt="">
 			</div>
+			<img class="bg-RT" src="./assets/animation/stepsRT.png" alt="">
+			<img class="bg-LB" src="./assets/animation/stepsLB.png" alt="">
+			<img class="bg-CL" src="./assets/animation/stepsCL.png" alt="">
+			<img class="bg-RB" src="./assets/animation/stepsRB.png" alt="">
 		</main>
-		<footer id="bgColor" class="footer__assortment footer__color footer__product">
+		<footer id="bgColorFooter" class="footer__assortment footer__product">
 			<div class="fouthPage__content-bottom __container">
 				<div class="fouthPage__blocktext">
 					620007, РФ, Свердловская обл., г.Екатеринбург, ул. Сибирский тракт 14-й километр, д.30,
@@ -312,12 +303,20 @@
 			<img style="max-height: 121px;" class="food__bg--grain" src="./assets/img/footer/footerGrains.png"
 				alt="footerGrains">
 		</footer>
+		<div id="popup" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#" class="popup__close close-popup">X</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Подключаем файл JS скриптов -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<!-- Подключаем скрипты -->
 	<script src="./js/swiper.js"></script>
+	<script src="./js/products.js"></script>
 	<script src="./js/script.js"></script>
 	<script src="./js/inputValidate.js"></script>
 	<script src="./js/mailSender.js"></script>

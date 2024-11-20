@@ -8,6 +8,7 @@
 		position: relative;
 		@include flexbox;
 		flex-direction: column;
+		z-index: 20;
 	}
 	&__wrapper {
 		@include flexbox;
@@ -38,12 +39,12 @@
 		flex-direction: column;
 		gap: 50px;
 		padding: 80px 90px 23px 30px;
-		background: var(--lightContrast-orange-color);
 		margin-bottom: 45px;
 		h3 {
 			@include textDefault($ff2, var(--black-color), 40px, 700, 48px);
 			text-align: left;
 			max-width: 560px;
+			text-transform: uppercase;
 		}
 		p {
 			@include textDefault($ff1, var(--black-color), 24px, 250, 29px);
@@ -65,26 +66,67 @@
 		}
 	}
 }
-
 .preview {
 	&-swiper {
-		height: 90%;
+		height: 92%;
 		width: 360px;
+		display: flex;
+		padding-left: 12px;
 	}
 	&-slide {
 		display: flex;
 		justify-content: center;
 		max-height: 350px;
-		max-width: 493px;
+		max-width: 360px;
 	}
 	&-pagination {
 	}
 }
 
+.swiper-pagination-bullet {
+	display: inline-block;
+	width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 20px));
+	height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 20px));
+	background: var(--swiper-pagination-bullet-inactive-color, #fff);
+	opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+	box-sizing: border-box;
+	border: 1px solid #ffa777;
+}
+.swiper-pagination-bullet-active {
+	background: var(--swiper-pagination-color, #ffa777);
+}
+
+//====================================BG===================================
+
+.bg-RT {
+	position: absolute;
+	top: 14%;
+	right: 0;
+	z-index: -1;
+}
+.bg-LB {
+	position: absolute;
+	bottom: 0;
+	left: -140px;
+	z-index: -1;
+}
+.bg-CL {
+	position: absolute;
+	top: 36%;
+	left: -70px;
+	z-index: -1;
+}
+.bg-RB {
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	z-index: -1;
+}
+
 //================================Advanteges==============================
 
 .advantages {
-	margin-top: 100px;
+	margin-top: 130px;
 	margin-bottom: 80px;
 	position: relative;
 	h4 {
@@ -116,17 +158,8 @@
 }
 
 //=======================================================================
-.tabs {
-	margin-bottom: 10px;
-}
-.tabs > input[type="radio"] {
-	display: none;
-}
-.label-tabs {
-	cursor: pointer;
-}
+
 .tab-content {
-	display: none;
 	width: 1210px;
 	&--gridList {
 		margin-top: 50px;
@@ -162,24 +195,26 @@
 		}
 	}
 }
-
-#tab-btn-1:checked ~ #content-1,
-#tab-btn-2:checked ~ #content-2,
-#tab-btn-3:checked ~ #content-3 {
-	display: block;
+#content-1::after {
+	content: "";
+	background-image: url("../../assets/animation/stepsCC.png");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 20%;
+	left: 0;
+	z-index: -1;
 }
-
-#content-2 {
-	margin: 80px 0 90px 0;
-}
-
 #content-3 {
 	@include textDefault($ff1, var(--blackLight-text-color), 24px, 400, 28px);
 	text-align: left;
 	margin: 90px 0 120px 0;
 }
-
 .content-2__content {
+	margin: 80px 0 90px 0;
 	@include flexbox;
 	justify-content: space-between;
 	gap: 50px;
@@ -198,6 +233,7 @@
 		}
 	}
 	&--rs {
+		margin-top: 68px;
 		@include flexbox;
 		flex-direction: column;
 		min-width: 683px;
@@ -219,7 +255,91 @@
 }
 .product--polzunok {
 	margin-bottom: 18px;
+	width: 234px;
+	margin-left: 100px;
+	input {
+		border: 0.83px solid rgb(0, 0, 0);
+		height: 2px;
+		accent-color: #000000;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 }
+
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.tabs label {
+	order: 1;
+	display: block;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	@include textDefault($ff2, #f0f0f0, 35px, 700, 42px);
+	text-align: center;
+	transition: background ease 0.2s;
+	&:not(:last-child) {
+		margin-right: 3%;
+	}
+}
+.tabs .tab {
+	order: 99;
+	flex-grow: 1;
+	width: 100%;
+	display: none;
+	background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	@include textDefault($ff2, var(--blackLight-text-color), 35px, 700, 42px);
+	text-align: center;
+	background: #fff;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		border: 1px solid rgb(248, 125, 75);
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+	.tabs .tab,
+	.tabs label {
+		order: initial;
+	}
+	.tabs label {
+		width: 100%;
+		margin-right: 0;
+		margin-top: 0.2rem;
+	}
+}
+
+.hr1 {
+	width: 100%;
+	margin-bottom: 45px;
+	background-color: unset;
+	height: 1px;
+}
+.hr2 {
+	width: 100%;
+	margin-bottom: 60px;
+	height: 1px;
+}
+
 //=======================================================================
 
 .nutritionalValue {
@@ -242,6 +362,11 @@
 		@include textDefault($ff1, var(--blackLight-text-color), 24px, 250, 28px);
 		text-align: left;
 	}
+	&--image {
+		object-fit: contain;
+		max-width: 100%;
+		max-height: 100%;
+	}
 }
 
 .whereBuy-product {
@@ -249,4 +374,8 @@
 		@include textDefault($ff2, var(--blackLight-text-color), 40px, 700, 48px);
 		text-align: left;
 	}
+}
+.footer__product {
+	position: relative;
+	z-index: 9999;
 }
