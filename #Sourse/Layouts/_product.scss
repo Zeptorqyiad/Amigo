@@ -379,3 +379,160 @@
 	position: relative;
 	z-index: 9999;
 }
+//=======================================================================
+//=======================================================================
+@media (max-width: 1130.98px) {
+	.infoblock--blocktext {
+		padding: 30px;
+	}
+	.infoblock--blocktext {
+		gap: 20px;
+	}
+	.infoblock--blocktext h3 {
+		font-size: 26px;
+	}
+	.infoblock--blocktext p {
+		font-size: 20px;
+	}
+	.swiper-wrapper {
+		height: 80%;
+	}
+	.product__wrapper--goBack {
+		left: 20px;
+	}
+	.preview-swiper {
+		width: 220px;
+	}
+}
+@media (max-width: 691.98px) {
+	.infoblock--blocktext {
+		padding: 20px;
+	}
+	.infoblock--blocktext {
+		gap: 20px;
+	}
+	.infoblock--blocktext h3 {
+		font-size: 22px;
+	}
+	.infoblock--blocktext p {
+		font-size: 18px;
+	}
+	.swiper-wrapper {
+		height: 70%;
+	}
+}
+@media (max-width: 600.98px) {
+	.product__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.preview-swiper {
+		height: 100%;
+	}
+	.product__wrapper--slider {
+		width: 100%;
+		height: 400px;
+	}
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: var(--swiper-pagination-bottom, 50px);
+	}
+	.product__wrapper--infoblock {
+		width: 100%;
+	}
+	.infoblock--blocktext h3 {
+		text-align: center;
+	}
+	.infoblock--value {
+		justify-content: center;
+	}
+	.infoblock--blocktext p {
+		text-align: justify;
+	}
+}
+@media (max-width: 573.98px) {
+	.advantages__list {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+}
+@media (max-width: 714.98px) {
+	.tab-content--gridList {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 20px;
+	}
+	#content-3 {
+		margin: 40px 10px;
+		text-align: center;
+	}
+	.nutritionalValue--title {
+		font-size: 26px;
+	}
+	.nutritionalValue--text {
+		font-size: 22px;
+	}
+	.nutritionalValue {
+		margin-top: 20px;
+	}
+	.nutritionalValue--image {
+		width: 120px;
+		height: 120px;
+	}
+	.tabs label,
+	.tabs input[type="radio"]:checked + label {
+		font-size: 26px;
+	}
+}
+@media (max-width: 954.98px) {
+	.content-2__content--rationImage {
+		width: 250px;
+	}
+}
+@media (max-width: 720.98px) {
+	.content-2__content {
+		margin: 30px 0;
+		gap: 10px;
+	}
+	.content-2__content--ls h5 {
+		font-size: 26px;
+		margin-left: 10px;
+	}
+	.content-2__content--rationImage {
+		max-width: 250px;
+		min-width: 0;
+		margin-left: 40px;
+	}
+	.content-2__content--ls {
+		flex: 0 1 200px;
+	}
+	.content-2__content--rs {
+		margin-top: 20px;
+		min-width: 0;
+		max-width: 282px;
+	}
+	.content-2__content--text {
+		font-size: 16px;
+	}
+}
+@media (max-width: 621.98px) {
+	.content-2__content {
+		transform: scale(0.9);
+		transform-origin: 0 0;
+	}
+}
+@media (max-width: 528.98px) {
+	.content-2__content {
+		flex-direction: column;
+		transform: scale(1);
+		transform-origin: 0 0;
+	}
+	.content-2__content--rs {
+		justify-content: center;
+		max-width: 100%;
+		margin-left: 20px;
+	}
+}
