@@ -45,7 +45,6 @@
 .assortment__grid {
 	display: grid;
 	grid-template-columns: repeat(3, 292px);
-	justify-items: center;
 	justify-content: space-around;
 	row-gap: 70px;
 	&--item {
@@ -82,4 +81,45 @@
 	max-width: 80%;
 	@include textDefault($ff1, var(--blackLight-text-color), 18px, 400, 21px);
 	text-align: center;
+}
+.button--assortment {
+	display: flex;
+	max-width: 275px;
+	background-color: #c46031;
+	padding: 18px 20px;
+	border-radius: 15px;
+	@include textDefault($ff1, var(--white-color), 20px, 700, 20px);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 50px;
+	cursor: pointer;
+}
+@media (max-width: 1010.98px) {
+	.assortment__grid {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.main__assortment--title {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 28px;
+	}
+	.fouthPage__content-bottom {
+		margin-top: 20px;
+		align-items: center;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.fouthPage__inputBlock {
+		margin-top: 20px;
+	}
+}
+@media (max-width: 586.98px) {
+	.hidden-item {
+		display: none;
+	}
 }

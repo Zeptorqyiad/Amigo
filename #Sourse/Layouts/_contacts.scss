@@ -83,3 +83,57 @@
 .contacts__form--btn:hover {
 	background: #56503e;
 }
+//=======================================================================
+//=======================================================================
+@media (max-width: 1068.98px) {
+	.main__contacts {
+		margin-top: 80px;
+		display: flex;
+		justify-content: space-between;
+		gap: 0px;
+	}
+	.main__contacts--rs {
+		min-width: 315px;
+	}
+}
+@media (max-width: 724.98px) {
+	.contacts__blocktext--adress {
+		font-size: 22px;
+	}
+	.contacts__blocktext a {
+		font-size: 22px;
+	}
+	.contacts__blocktext--callback,
+	.contacts__blocktext--title {
+		font-size: 26px;
+	}
+	.contacts__blocktext--callback {
+		margin-bottom: 20px;
+	}
+	.main__contacts {
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 20px;
+	}
+	.main__contacts--rs {
+		order: 1;
+		align-items: start;
+		flex-basis: 100%;
+	}
+	.main__contacts--ls {
+		order: 2;
+	}
+	.contacts__form--title {
+		margin-bottom: 10px;
+		font-size: 22px;
+	}
+}
+@media (max-width: 500.98px) {
+	.contacts__blocktext--callback,
+	.contacts__blocktext--title {
+		font-size: 22px;
+	}
+	.contacts__blocktext--callback {
+		margin-bottom: 5px;
+	}
+}
