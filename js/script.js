@@ -1,23 +1,4 @@
-// Burger Menu
 
-const burgerLine = document.querySelector('.header--burger__list')
-const burgerMenu = document.querySelector('.menu__icon')
-
-burgerLine.addEventListener('click', () => {
-   if (burgerLine) {
-      burgerLine.classList.toggle('active')
-      burgerMenu.classList.toggle('active')
-      document.body.classList.toggle('_lock')
-   }
-})
-
-window.addEventListener('resize', function () {
-   if (window.matchMedia('(min-width: px)').matches) {
-      burgerLine.classList.remove('active')
-      burgerMenu.classList.remove('active')
-      document.body.classList.remove('_lock')
-   }
-})
 
 // ChangeClick event
 $(function () {
@@ -111,3 +92,35 @@ document.addEventListener('keydown', function (e) {
          Element.prototype.msMatchesSelector
    }
 })()
+
+// ValueProd
+
+const buttons = [...document.querySelectorAll('.valueProd')]
+const previewSlide = [...document.querySelectorAll('.preview-slide')]
+const minProd = document.getElementById('minProd')
+const maxProd = document.getElementById('maxProd')
+
+buttons.forEach((button) => {
+   button.addEventListener('click', () => {
+      document.querySelector('.valueProd.active').classList.remove('active')
+      button.classList.add('active')
+   })
+})
+previewSlide.forEach((item) => {
+   document.addEventListener('click', () => {
+      item.classList.toggle('minImage')
+   })
+})
+
+// activeFilter
+
+const filter = [...document.querySelectorAll('.main__article--filteritem')]
+
+filter.forEach((activeFilter) => {
+   activeFilter.addEventListener('click', () => {
+      document
+         .querySelector('.main__article--filteritem.active-filter')
+         .classList.remove('active-filter')
+      activeFilter.classList.add('active-filter')
+   })
+})

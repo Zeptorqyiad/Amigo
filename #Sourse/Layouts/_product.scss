@@ -79,8 +79,9 @@
 		max-height: 350px;
 		max-width: 360px;
 	}
-	&-pagination {
-	}
+}
+.preview-slide.minImage {
+	max-height: 300px;
 }
 
 .swiper-pagination-bullet {
@@ -121,6 +122,9 @@
 	bottom: 5%;
 	right: 0;
 	z-index: -1;
+}
+.valueProd.active {
+	background-color: #ffa777;
 }
 
 //================================Advanteges==============================
