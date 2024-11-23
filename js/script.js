@@ -1,5 +1,3 @@
-
-
 // ChangeClick event
 $(function () {
    $('.fouthPage__animal_type--chooseBlock').on(

@@ -85,6 +85,17 @@
 			<!-- Button showcase -->
 			<a class="button button--article">Загрузить еще</a>
 		</main>
+		<script>
+			const showButton = document.querySelector('.button--article')
+			const undBlog = [...document.querySelectorAll('.und-blogitem')]
+
+			showButton.addEventListener('click', function () {
+				showButton.style.display = 'none'
+				undBlog.forEach((show) => {
+					show.style.display = 'block'
+				})
+			})
+		</script>
 		<footer class="footer__assortment footer__color">
 			<div class="fouthPage__content-bottom __container">
 				<div class="fouthPage__blocktext">
@@ -106,7 +117,6 @@
 	<!-- Подключаем файл JS скриптов -->
 	<script src="./js/script.js"></script>
 	<script src="./js/burger.js"></script>
-	<script src="./js/showButton.js"></script>
 	<script src="./js/inputValidate.js"></script>
 	<script src="./js/mailSender.js"></script>
 </body>

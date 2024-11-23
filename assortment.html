@@ -108,6 +108,17 @@
 				<a href="##" class="button--assortment">Загрузить ещё</a>
 			</section>
 		</main>
+		<script>
+			const showBtnAssort = document.querySelector('.button--assortment')
+			const hiddenAssort = [...document.querySelectorAll('.hidden-item')]
+
+			showBtnAssort.addEventListener('click', () => {
+				showBtnAssort.style.display = 'none'
+				hiddenAssort.forEach((show) => {
+					show.style.display = 'block'
+				})
+			})
+		</script>
 		<footer class="footer__assortment footer__color">
 			<div class="fouthPage__content-bottom __container">
 				<div class="fouthPage__blocktext">

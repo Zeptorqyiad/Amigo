@@ -238,7 +238,17 @@
 								<h5>Укажите вес питомца</h5>
 								<span style="margin-left: 50px;">Вес, кг</span>
 								<div class="fouthPage__animal_weight--polzunok product--polzunok">
-									<input type="range" min="1" max="100" value="10" id="myRange">
+									<input type="range" min="1" max="5" value="1" id="myRange"
+										oninput="this.nextElementSibling.value = this.value">
+									<output class="output output-prod">1</output>
+									<style>
+										.output-prod {
+											color: var(--black-color);
+											position: absolute;
+											top: 5px;
+											right: -10%;
+										}
+									</style>
 								</div>
 								<img class="content-2__content--rationImage" src="./assets/img/main/foodNormalRation.png"
 									alt="foodNormalRation">

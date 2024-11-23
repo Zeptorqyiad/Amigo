@@ -8,21 +8,30 @@ burgerLine.forEach((burgerIcon) => {
    burgerIcon.addEventListener('click', () => {
       if (burgerLine) {
          burgerIcon.classList.toggle('active')
+         if (burgerIcon.classList.contains('active')) {
+            resetBurger(burgerIcon)
+         }
          burgerMenu.forEach((el) => {
             el.classList.toggle('active')
+            resetBurger(el)
          })
          menu.forEach((wrap) => {
             wrap.classList.toggle('active')
+            resetBurger(wrap)
          })
          document.body.classList.toggle('_lock')
+         if (document.body.classList.contains('_lock')) {
+            window.addEventListener('scroll', () => {
+               document.body.classList.remove('_lock')
+            })
+         }
       }
    })
 })
+function resetBurger(props) {
+   window.addEventListener('scroll', () => {
+      props.classList.remove('active')
+   })
+}
 
-window.addEventListener('scroll', function () {
-   burgerLine.classList.remove('active')
-   burgerMenu.classList.remove('active')
-   menu.classList.remove('active')
-   document.body.classList.remove('_lock')
-})
 //=======================================================================
